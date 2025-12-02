@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TwitchStreamerTest</string>
+
+    <string name="stream_key">Stream key</string>
+    <string name="save_and_go_live">Save and go live</string>
+    <string name="error_empty_input">Stream key must not be empty</string>
+    <string name="error_other">Something went wrong</string>
+    <string name="camera_microphone_permissions">Camera &amp; microphone permissions required</string>
+    <string name="status">Status:</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_online">Online</string>
+    <string name="status_reconnecting">Reconnecting…</string>
+    <string name="start_stream">Start stream</string>
+    <string name="stop_stream">Stop stream</string>
+    <string name="enable_microphone">Enable microphone</string>
+    <string name="disable_microphone">Disable microphone</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="show_viewers">Show Viewers</string>
+    <string name="viewers_title">Viewers List</string>
+    <string name="viewers_empty">Empty list of viewers</string>
+    <string name="viewers_search">Search</string>
+</resources>

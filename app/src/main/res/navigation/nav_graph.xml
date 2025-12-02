@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/configFragment">
+
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.example.twitchstreamer.presentation.config.ConfigFragment"
+        android:label="Config"
+        tools:layout="@layout/fragment_config">
+        <action
+            android:id="@+id/action_configFragment_to_streamFragment"
+            app:destination="@id/streamFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/streamFragment"
+        android:name="com.example.twitchstreamer.presentation.stream.StreamFragment"
+        android:label="Live Streaming"
+        tools:layout="@layout/fragment_stream">
+        <action
+            android:id="@+id/action_streamFragment_to_viewersFragment"
+            app:destination="@id/viewersFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/viewersFragment"
+        android:name="com.example.twitchstreamer.presentation.viewers.ViewersFragment"
+        android:label="Viewer List"
+        tools:layout="@layout/fragment_viewers" />
+
+</navigation>
