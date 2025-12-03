@@ -3,10 +3,8 @@ package com.example.twitchstreamer.data.viewers
 import com.example.twitchstreamer.data.local.dao.ViewerDao
 import com.example.twitchstreamer.domain.viewers.ViewersLocalDataSource
 import com.example.twitchstreamer.domain.viewers.model.ViewerModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
@@ -23,7 +21,7 @@ internal class ViewersLocalDataSourceImpl @Inject constructor(
             entityList.map { it.toDomain() }
         }
 
-    override suspend fun saveViewers(viewers: List<ViewerModel>) = withContext(Dispatchers.IO) {
+    override suspend fun saveViewers(viewers: List<ViewerModel>) {
         viewerDao.replaceAll(viewers.map { it.toEntity() })
     }
 }

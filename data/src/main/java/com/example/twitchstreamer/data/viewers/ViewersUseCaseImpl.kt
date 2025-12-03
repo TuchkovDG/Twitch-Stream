@@ -4,7 +4,9 @@ import com.example.twitchstreamer.domain.viewers.GetLocalViewersUseCase
 import com.example.twitchstreamer.domain.viewers.GetRemoteViewersUseCase
 import com.example.twitchstreamer.domain.viewers.ViewersRepository
 import com.example.twitchstreamer.domain.viewers.model.ViewerModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
@@ -12,7 +14,7 @@ import javax.inject.Inject
  *
  * @property repository A [ViewersRepository] instance.
  */
-internal class GetLocalViewersUseCaseCaseImpl @Inject constructor(
+internal class GetLocalViewersUseCaseImpl @Inject constructor(
     private val repository: ViewersRepository
 ) : GetLocalViewersUseCase {
 
@@ -30,5 +32,7 @@ internal class GetRemoteViewersUseCaseImpl @Inject constructor(
     private val repository: ViewersRepository
 ) : GetRemoteViewersUseCase {
 
-    override suspend fun invoke(): List<ViewerModel> = repository.getRemoteViewers(AMOUNT_OF_USERS)
+    override suspend fun invoke(): List<ViewerModel> = withContext(Dispatchers.IO) {
+        return@withContext repository.getRemoteViewers(AMOUNT_OF_USERS)
+    }
 }

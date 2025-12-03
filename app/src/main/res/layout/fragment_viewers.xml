@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/black"
+    android:background="@android:color/white"
     android:padding="16dp">
 
     <View
         android:id="@+id/dragHandle"
         android:layout_width="32dp"
         android:layout_height="4dp"
-        android:background="@android:color/white"
+        android:background="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/viewers_title"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,8 @@
         android:importantForAutofill="no"
         android:inputType="textNoSuggestions"
         android:maxLength="100"
-        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvError" />
@@ -87,7 +88,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/viewers_empty"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,7 +14,7 @@ internal class ConfigRepositoryImpl @Inject constructor(
     private val dataSource: ConfigLocalDataSource
 ) : ConfigRepository {
 
-    override suspend fun getStreamKey(): Flow<String> = dataSource.getStreamKey()
+    override fun getStreamKey(): Flow<String> = dataSource.getStreamKey()
 
     override suspend fun saveStreamKey(key: String) = dataSource.saveStreamKey(key = key)
 }

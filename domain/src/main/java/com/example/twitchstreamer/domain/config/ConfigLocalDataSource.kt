@@ -10,7 +10,7 @@ interface ConfigLocalDataSource {
     /**
      * Fetch user stream key.
      */
-    suspend fun getStreamKey(): Flow<String>
+    fun getStreamKey(): Flow<String>
 
     /**
      * Save an user stream key.

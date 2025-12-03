@@ -19,7 +19,7 @@ private const val STREAM_KEY_ID = "stream_key_id"
  * @property dataStore A [Preferences] typed [DataStore] instance.
  */
 internal class UserConfigStorage @Inject constructor(
-    @UserConfigDataStore private val dataStore: DataStore<Preferences>,
+    @UserConfigDataStore private val dataStore: DataStore<Preferences>
 ) {
 
     /**

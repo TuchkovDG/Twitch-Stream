@@ -3,7 +3,9 @@ package com.example.twitchstreamer.data.config
 import com.example.twitchstreamer.domain.config.ConfigRepository
 import com.example.twitchstreamer.domain.config.GetStreamKeyUseCase
 import com.example.twitchstreamer.domain.config.SaveStreamKeyUseCase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 /**
@@ -15,7 +17,7 @@ internal class GetStreamKeyUseCaseImpl @Inject constructor(
     private val configRepository: ConfigRepository
 ) : GetStreamKeyUseCase {
 
-    override suspend fun invoke(): Flow<String> = configRepository.getStreamKey()
+    override fun invoke(): Flow<String> = configRepository.getStreamKey()
 }
 
 /**
@@ -27,5 +29,7 @@ internal class SaveStreamKeyUseCaseImpl @Inject constructor(
     private val configRepository: ConfigRepository
 ) : SaveStreamKeyUseCase {
 
-    override suspend fun invoke(key: String) = configRepository.saveStreamKey(key = key)
+    override suspend fun invoke(key: String) = withContext(Dispatchers.IO) {
+        configRepository.saveStreamKey(key = key)
+    }
 }

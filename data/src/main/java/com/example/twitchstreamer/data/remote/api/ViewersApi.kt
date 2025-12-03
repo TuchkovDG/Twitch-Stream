@@ -4,7 +4,7 @@ import com.example.twitchstreamer.data.remote.model.ViewersResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface BaseApi {
+interface ViewersApi {
 
     @GET("api/")
     suspend fun getViewers(@Query("results") amount: Int): ViewersResponse

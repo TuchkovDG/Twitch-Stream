@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
  */
 interface GetStreamKeyUseCase {
 
-    suspend operator fun invoke(): Flow<String>
+    operator fun invoke(): Flow<String>
 }
 
 /**

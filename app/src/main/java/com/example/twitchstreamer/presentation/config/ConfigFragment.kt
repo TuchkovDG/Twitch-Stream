@@ -1,5 +1,7 @@
 package com.example.twitchstreamer.presentation.config
 
+import android.content.res.ColorStateList
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -67,6 +69,11 @@ class ConfigFragment : Fragment() {
                     }
 
                     binding.btnSave.isEnabled = state.isSaveEnabled && !state.isLoading
+                    binding.btnSave.backgroundTintList = if (state.isSaveEnabled && !state.isLoading) {
+                        ColorStateList.valueOf(Resources.getSystem().getColor(android.R.color.black, null))
+                    } else {
+                        ColorStateList.valueOf(Resources.getSystem().getColor(android.R.color.darker_gray, null))
+                    }
                     binding.progress.visibility = if (state.isLoading) View.VISIBLE else View.GONE
                 }
             }

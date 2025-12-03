@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@android:color/white">
 
     <com.pedro.library.view.OpenGlView
         android:id="@+id/openGlView"
@@ -38,7 +38,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 tools:text="Status" />
 
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="end"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:visibility="gone"
                 tools:text="Durations" />
@@ -59,7 +59,9 @@
             android:id="@+id/btnStartStream"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/start_stream" />
+            android:backgroundTint="@android:color/black"
+            android:text="@string/start_stream"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btnStopStream"

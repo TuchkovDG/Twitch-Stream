@@ -1,6 +1,6 @@
 package com.example.twitchstreamer.data.remote.di
 
-import com.example.twitchstreamer.data.remote.api.BaseApi
+import com.example.twitchstreamer.data.remote.api.ViewersApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,5 +25,5 @@ object RemoteModule {
 
     @Provides
     @Singleton
-    fun provideBaseApi(retrofit: Retrofit): BaseApi = retrofit.create(BaseApi::class.java)
+    fun provideViewersApi(retrofit: Retrofit): ViewersApi = retrofit.create(ViewersApi::class.java)
 }

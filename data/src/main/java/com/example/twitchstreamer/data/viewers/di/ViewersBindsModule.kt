@@ -1,6 +1,6 @@
 package com.example.twitchstreamer.data.viewers.di
 
-import com.example.twitchstreamer.data.viewers.GetLocalViewersUseCaseCaseImpl
+import com.example.twitchstreamer.data.viewers.GetLocalViewersUseCaseImpl
 import com.example.twitchstreamer.data.viewers.GetRemoteViewersUseCaseImpl
 import com.example.twitchstreamer.data.viewers.ViewersLocalDataSourceImpl
 import com.example.twitchstreamer.data.viewers.ViewersRemoteDataSourceImpl
@@ -34,7 +34,7 @@ internal abstract class ViewersBindsModule {
 
     @Binds
     @Singleton
-    abstract fun bindGetLocalViewersUseCase(useCase: GetLocalViewersUseCaseCaseImpl): GetLocalViewersUseCase
+    abstract fun bindGetLocalViewersUseCase(useCase: GetLocalViewersUseCaseImpl): GetLocalViewersUseCase
 
     @Binds
     @Singleton
